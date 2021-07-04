@@ -1,0 +1,15 @@
+final skills = [
+  'Java',
+  'C++',
+  'Dart',
+  'Flutter',
+  'Android',
+  'iOS',
+  'HTML',
+  'Django',
+  'Firebase',
+  'CSS',
+  'SQL',
+  'Python',
+  'C',
+];

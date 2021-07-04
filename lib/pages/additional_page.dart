@@ -1,6 +1,6 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/pages/homepage.dart';
+import 'package:my_portfolio/pages/mainpage.dart';
 
 class LoadingPage extends StatefulWidget {
   @override
@@ -32,7 +32,7 @@ class _LoadingPageState extends State<LoadingPage> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Colors.black,
+        color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -49,12 +49,28 @@ class _LoadingPageState extends State<LoadingPage> {
                 top: 30,
               ),
             ),
-            Text(
-              'Stealing your data 😜 🤪 😉',
-              style: TextStyle(
-                color: Colors.yellow,
-                fontSize: 25,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Stealing your Data',
+                  style: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Image.asset(
+                  'assets/winking-face.png',
+                  height: 40,
+                  width: 40,
+                ),
+                Image.asset(
+                  'assets/beaming-face.png',
+                  height: 40,
+                  width: 40,
+                ),
+              ],
             ),
           ],
         ),

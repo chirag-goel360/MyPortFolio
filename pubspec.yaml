@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flare_flutter:
   rive:
+  font_awesome_flutter:
 
 dev_dependencies:
   flutter_test:
@@ -62,17 +63,21 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: Christian_Heedlay
+      fonts:
+        - asset: assets/Christian-Heedlay.ttf
+        - asset: assets/Christian-Heedlay-Italic.ttf
+          style: italic
+    - family: Beauty_Gadiez
+      fonts:
+        - asset: assets/Beauty-Gadiez.otf
+    - family: Relate
+      fonts:
+        - asset: assets/Relate.ttf
+    - family: Amanah
+      fonts:
+        - asset: assets/Amanah.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
