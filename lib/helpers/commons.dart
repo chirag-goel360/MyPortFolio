@@ -79,6 +79,30 @@ Widget buildContent(BuildContext context) {
         height: Responsive.isMobile(context) ? 20 : 40,
       ),
       Responsive.isMobile(context)
+          ? Center(
+              child: Image.asset(
+                'assets/programmer_mobile.gif',
+                height: 200,
+              ),
+            )
+          : Responsive.isTablet(context)
+              ? Center(
+                  child: Image.asset(
+                    'assets/programmer_tablet.gif',
+                    height: 200,
+                  ),
+                )
+              : Container(),
+      Responsive.isMobile(context)
+          ? SizedBox(
+              height: 20,
+            )
+          : Responsive.isTablet(context)
+              ? SizedBox(
+                  height: 20,
+                )
+              : Container(),
+      Responsive.isMobile(context)
           ? Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

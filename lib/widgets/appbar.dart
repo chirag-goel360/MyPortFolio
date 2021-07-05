@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/helpers/responsive.dart';
+import 'package:my_portfolio/pages/mainpage.dart';
+import 'package:my_portfolio/pages/project_page.dart';
 
 Widget buildAppBar(BuildContext context) {
   return AppBar(
     title: buildTitle(),
     backgroundColor: Colors.teal.shade200,
-    actions: !Responsive.isMobile(context) ? buildButtons() : null,
+    actions: !Responsive.isMobile(context) ? buildButtons(context) : null,
   );
 }
 
@@ -42,7 +44,7 @@ Widget buildTitle() {
   );
 }
 
-List<Widget> buildButtons() {
+List<Widget> buildButtons(context) {
   return <Widget>[
     MaterialButton(
       child: Text(
@@ -55,7 +57,16 @@ List<Widget> buildButtons() {
           color: Colors.blueAccent,
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return HomePage();
+            },
+          ),
+        );
+      },
     ),
     MaterialButton(
       child: Text(
@@ -68,7 +79,16 @@ List<Widget> buildButtons() {
           color: Color(0xFF45405B),
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return ProjectsPage();
+            },
+          ),
+        );
+      },
     ),
     MaterialButton(
       child: Text(
