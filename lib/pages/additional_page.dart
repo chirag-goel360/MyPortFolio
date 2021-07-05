@@ -32,7 +32,27 @@ class _LoadingPageState extends State<LoadingPage> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Colors.white,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.grey,
+              Colors.white,
+            ],
+            begin: FractionalOffset(
+              0.0,
+              0.0,
+            ),
+            end: FractionalOffset(
+              1.0,
+              0.0,
+            ),
+            stops: [
+              0.0,
+              1.0,
+            ],
+            tileMode: TileMode.clamp,
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -55,7 +75,7 @@ class _LoadingPageState extends State<LoadingPage> {
                 Text(
                   'Stealing your Data',
                   style: TextStyle(
-                    color: Colors.purple,
+                    color: Colors.purple.shade400,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),

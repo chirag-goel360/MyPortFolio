@@ -45,7 +45,7 @@ class _SplashPageState extends State<SplashPage> {
               255,
               255,
               255,
-              0.3,
+              0.2,
             ),
           ),
           Align(
@@ -69,10 +69,10 @@ class _SplashPageState extends State<SplashPage> {
                   ),
                 ),
                 Container(
-                  height: 4,
+                  height: 5,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Colors.pinkAccent,
                   ),
                 ),
                 Padding(
@@ -95,8 +95,8 @@ class _SplashPageState extends State<SplashPage> {
                   weight: FontWeight.bold,
                   gradient: LinearGradient(
                     colors: [
-                      Colors.green.shade100,
-                      Colors.green.shade400,
+                      Colors.green.shade200,
+                      Colors.green.shade600,
                     ],
                   ),
                 ),

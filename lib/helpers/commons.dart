@@ -6,15 +6,15 @@ import 'package:my_portfolio/helpers/experience_class.dart';
 import 'package:my_portfolio/helpers/experience_history.dart';
 import 'package:my_portfolio/helpers/responsive.dart';
 import 'package:my_portfolio/helpers/skills.dart';
+import 'package:random_color/random_color.dart';
 
 Widget buildContent(BuildContext context) {
   return Column(
-    mainAxisSize: MainAxisSize.min,
     mainAxisAlignment: MainAxisAlignment.center,
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       SizedBox(
-        height: 24,
+        height: 20,
       ),
       RichText(
         text: TextSpan(
@@ -30,24 +30,30 @@ Widget buildContent(BuildContext context) {
                 color: Color(0xFF45405B),
                 fontSize: Responsive.isMobile(context) ? 36 : 45,
                 fontWeight: FontWeight.bold,
-                letterSpacing: 1.0,
               ),
             ),
             TextSpan(
-              text: 'Me',
+              text: 'Me ',
               style: TextStyle(
                 fontFamily: 'Beauty_Gadiez',
-                color: Color(0xFF50AFC0),
-                fontSize: Responsive.isMobile(context) ? 36 : 45,
+                color: Colors.blue,
+                fontSize: Responsive.isMobile(context) ? 25 : 35,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1.0,
+              ),
+            ),
+            WidgetSpan(
+              child: Image.asset(
+                'assets/lob.png',
+                height: Responsive.isMobile(context) ? 20 : 30,
+                width: Responsive.isMobile(context) ? 20 : 30,
               ),
             ),
           ],
         ),
       ),
       SizedBox(
-        height: 4,
+        height: 10,
       ),
       Text(
         Responsive.isMobile(context)
@@ -56,41 +62,33 @@ Widget buildContent(BuildContext context) {
         style: TextStyle(
           color: Color(0xFF45405B),
           fontFamily: 'Relate',
-          fontSize: 17,
-          letterSpacing: 1,
+          fontSize: 20,
         ),
       ),
       SizedBox(
         height: Responsive.isMobile(context) ? 12 : 24,
       ),
-      Padding(
-        padding: EdgeInsets.only(
-          right: 10.0,
-        ),
-        child: Text(
-          'Recent Computer Science Graduate (9.0 CGPA) seeking to use my frontend development experience in an entry-level position. Possess 11 months of internship experience building and testing applications for Android, iOS, and Windows. Skilled with C, C++, Java, Python, Django, SQL, Firebase and Flutter. Independently built lots of application that are liked by many people around the Globe.',
-          style: TextStyle(
-            color: Color(0xFF85819C),
-            height: 1.5,
-            fontSize: 14,
-          ),
+      Text(
+        'Recent Computer Science Graduate (9.0 CGPA) seeking to use my frontend development experience in an entry-level position. Possess 11 months of internship experience building and testing applications for Android, iOS, and Windows. Skilled with C, C++, Java, Python, Django, SQL, Firebase and Flutter. Independently built lots of application that are liked by many people around the Globe.',
+        style: TextStyle(
+          color: Color(0xFF81819C),
+          fontSize: 16,
         ),
       ),
       SizedBox(
-        height: Responsive.isMobile(context) ? 24 : 48,
+        height: Responsive.isMobile(context) ? 20 : 40,
       ),
       Responsive.isMobile(context)
           ? Column(
-              mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 buildEducation(),
                 SizedBox(
-                  height: 24,
+                  height: 25,
                 ),
                 buildExperience(),
                 SizedBox(
-                  height: 24,
+                  height: 25,
                 ),
                 buildSkill(
                   context,
@@ -113,14 +111,14 @@ Widget buildSkillEducationExperience(BuildContext context) {
         child: buildEducation(),
       ),
       SizedBox(
-        width: 20,
+        width: 15,
       ),
       Expanded(
         flex: 3,
         child: buildExperience(),
       ),
       SizedBox(
-        width: 20,
+        width: 15,
       ),
       Expanded(
         flex: 2,
@@ -137,7 +135,8 @@ Widget buildSkill(BuildContext context) {
     (skill) {
       return Padding(
         padding: EdgeInsets.only(
-          right: 8,
+          right: 5,
+          bottom: 3,
         ),
         child: buildChips(
           context,
@@ -147,7 +146,6 @@ Widget buildSkill(BuildContext context) {
     },
   ).toList();
   return Column(
-    mainAxisSize: MainAxisSize.max,
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       buildSkillsHeading(),
@@ -158,26 +156,51 @@ Widget buildSkill(BuildContext context) {
   );
 }
 
+RandomColor _randomColor = RandomColor();
+
 Widget buildSkillsHeading() {
-  return Text(
-    'Skill I Have',
-    style: TextStyle(
-      color: Color(0xFF45405B),
-      fontSize: 17.0,
-      letterSpacing: 1.0,
-      fontFamily: 'Christian_Heedlay',
-    ),
+  return Row(
+    children: [
+      Text(
+        'Skill I Have',
+        style: TextStyle(
+          color: Colors.indigo,
+          fontSize: 17.0,
+          fontWeight: FontWeight.w600,
+          fontFamily: 'Christian_Heedlay',
+        ),
+      ),
+      Text(
+        ' ',
+      ),
+      Image.asset(
+        'assets/skills.png',
+        height: 30,
+        width: 30,
+      ),
+    ],
   );
 }
 
 Widget buildChips(BuildContext context, String label) {
   return Chip(
+    backgroundColor: Colors.blueGrey.shade50,
     label: Text(
       label,
       style: TextStyle(
-        color: Color(0xFF85819C),
-        height: 1.5,
-        fontSize: Responsive.isMobile(context) ? 10 : 12,
+        color: Responsive.isMobile(context)
+            ? _randomColor.randomColor(
+                colorHue: ColorHue.red,
+              )
+            : _randomColor.randomColor(
+                colorHue: ColorHue.multiple(
+                  colorHues: [
+                    ColorHue.blue,
+                    ColorHue.pink,
+                  ],
+                ),
+              ),
+        fontSize: Responsive.isMobile(context) ? 12 : 14,
       ),
     ),
   );
@@ -190,7 +213,7 @@ Widget buildEducation() {
       buildEducationHeading(),
       buildEducationInfo(),
       SizedBox(
-        height: 8,
+        height: 10,
       ),
       buildEducationHistory(),
     ],
@@ -204,7 +227,7 @@ Widget buildExperience() {
       buildExperienceHeading(),
       buildExperienceInfo(),
       SizedBox(
-        height: 8,
+        height: 10,
       ),
       buildExperienceHistory(),
     ],
@@ -212,26 +235,50 @@ Widget buildExperience() {
 }
 
 Widget buildExperienceHeading() {
-  return Text(
-    'Experience',
-    style: TextStyle(
-      color: Color(0xFF45405B),
-      fontFamily: 'Christian_Heedlay',
-      fontSize: 17.0,
-      letterSpacing: 1.0,
-    ),
+  return Row(
+    children: [
+      Text(
+        'Experience',
+        style: TextStyle(
+          color: Colors.indigoAccent.shade200,
+          fontFamily: 'Christian_Heedlay',
+          fontWeight: FontWeight.w600,
+          fontSize: 17,
+        ),
+      ),
+      Text(
+        ' ',
+      ),
+      Image.asset(
+        'assets/experience.png',
+        height: 30,
+        width: 30,
+      ),
+    ],
   );
 }
 
 Widget buildEducationHeading() {
-  return Text(
-    'Education',
-    style: TextStyle(
-      color: Color(0xFF45405B),
-      fontFamily: 'Christian_Heedlay',
-      fontSize: 17.0,
-      letterSpacing: 1.0,
-    ),
+  return Row(
+    children: [
+      Text(
+        'Education',
+        style: TextStyle(
+          color: Colors.indigo.shade800,
+          fontFamily: 'Christian_Heedlay',
+          fontWeight: FontWeight.w600,
+          fontSize: 17,
+        ),
+      ),
+      Text(
+        ' ',
+      ),
+      Image.asset(
+        'assets/education.png',
+        height: 30,
+        width: 30,
+      ),
+    ],
   );
 }
 
@@ -240,8 +287,7 @@ Widget buildExperienceInfo() {
     'I worked on verious technologies during my Internship period. I worked on Wordpress, Flutter, SQL, Adobe XD and PHP.',
     style: TextStyle(
       color: Color(0xFF85819C),
-      fontSize: 12,
-      letterSpacing: 1,
+      fontSize: 14,
     ),
   );
 }
@@ -251,8 +297,7 @@ Widget buildEducationInfo() {
     'I learned how to work in team, time management, enhance skills in corporate world during my college period. This will help me in a long run.',
     style: TextStyle(
       color: Color(0xFF85819C),
-      fontSize: 12,
-      letterSpacing: 1,
+      fontSize: 14,
     ),
   );
 }
@@ -291,20 +336,20 @@ Widget _buildExperienceTile(Experience experience) {
           experience.degree,
           style: TextStyle(
             color: Color(0xFF45405B),
-            fontSize: 15,
+            fontSize: 16,
           ),
         ),
         Text(
           experience.organization,
           style: TextStyle(
             color: Color(0xFF45405B),
-            fontSize: 12,
+            fontSize: 13,
           ),
         ),
         Text(
           experience.start + ' - ' + experience.end,
           style: TextStyle(
-            color: Color(0xFF45405B),
+            color: Colors.deepOrange,
             fontSize: 12,
           ),
         ),
@@ -325,20 +370,20 @@ Widget _buildEducationTile(Education education) {
           education.degree,
           style: TextStyle(
             color: Color(0xFF45405B),
-            fontSize: 15,
+            fontSize: 16,
           ),
         ),
         Text(
           education.organization,
           style: TextStyle(
             color: Color(0xFF45405B),
-            fontSize: 12,
+            fontSize: 13,
           ),
         ),
         Text(
           education.start + ' - ' + education.end,
           style: TextStyle(
-            color: Color(0xFF45405B),
+            color: Colors.pinkAccent,
             fontSize: 12,
           ),
         ),
@@ -352,9 +397,8 @@ Widget buildBottomBar(BuildContext context) {
     children: [
       Divider(),
       Padding(
-        padding: EdgeInsets.all(12),
+        padding: EdgeInsets.all(10),
         child: Row(
-          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Align(
@@ -378,67 +422,65 @@ Widget buildCopyRight(BuildContext context) {
   return Text(
     '@ Chirag Goel. ALL RIGHTS RESERVED',
     style: TextStyle(
-      fontSize: Responsive.isMobile(context) ? 8 : 10,
+      fontSize: Responsive.isMobile(context) ? 10 : 12,
       color: Color(0xFF85819C),
-      letterSpacing: 1,
     ),
   );
 }
 
 Widget buildIcons() {
   return Row(
-    mainAxisSize: MainAxisSize.max,
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
       GestureDetector(
         onTap: () {},
         child: Icon(
           FontAwesomeIcons.linkedinIn,
-          color: Color(0xFF45405B),
+          color: Colors.blue,
           size: 20,
         ),
       ),
       SizedBox(
-        width: 16,
+        width: 15,
       ),
       GestureDetector(
         onTap: () {},
         child: Icon(
           FontAwesomeIcons.medium,
-          color: Color(0xFF45405B),
+          color: Colors.black87,
           size: 20,
         ),
       ),
       SizedBox(
-        width: 16,
+        width: 15,
       ),
       GestureDetector(
         onTap: () {},
         child: Icon(
           FontAwesomeIcons.whatsapp,
-          color: Color(0xFF45405B),
+          color: Colors.green,
           size: 20,
         ),
       ),
       SizedBox(
-        width: 16,
+        width: 15,
       ),
       GestureDetector(
         onTap: () {},
         child: Icon(
           FontAwesomeIcons.google,
-          color: Color(0xFF45405B),
+          color: Colors.red,
           size: 20,
         ),
       ),
       SizedBox(
-        width: 16,
+        width: 15,
       ),
       GestureDetector(
         onTap: () {},
         child: Icon(
           FontAwesomeIcons.github,
-          color: Color(0xFF45405B),
+          color: Colors.black38,
           size: 20,
         ),
       ),

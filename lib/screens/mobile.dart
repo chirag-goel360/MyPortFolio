@@ -4,11 +4,13 @@ import 'package:my_portfolio/helpers/commons.dart';
 Widget buildMobile(BuildContext context) {
   return IntrinsicHeight(
     child: Column(
-      mainAxisSize: MainAxisSize.min,
       children: [
         Expanded(
           flex: 1,
-          child: buildContent(context),
+          child: Padding(
+            padding: EdgeInsets.all(12),
+            child: buildContent(context),
+          ),
         ),
         Divider(),
         buildCopyRight(context),

@@ -4,7 +4,7 @@ import 'package:my_portfolio/helpers/responsive.dart';
 Widget buildAppBar(BuildContext context) {
   return AppBar(
     title: buildTitle(),
-    backgroundColor: Colors.teal.shade50,
+    backgroundColor: Colors.teal.shade200,
     actions: !Responsive.isMobile(context) ? buildButtons() : null,
   );
 }
@@ -21,12 +21,7 @@ Widget buildTitle() {
           text: 'Port',
           style: TextStyle(
             fontFamily: 'Christian_Heedlay',
-            color: Color.fromRGBO(
-              69,
-              64,
-              91,
-              1,
-            ),
+            color: Color(0xFFFFBD9B),
             fontSize: 22,
             fontWeight: FontWeight.bold,
             letterSpacing: 1.0,
@@ -36,12 +31,7 @@ Widget buildTitle() {
           text: 'Folio',
           style: TextStyle(
             fontFamily: 'Christian_Heedlay',
-            color: Color.fromRGBO(
-              80,
-              175,
-              192,
-              1,
-            ),
+            color: Color(0xFFFFC947),
             fontSize: 22,
             fontWeight: FontWeight.bold,
             letterSpacing: 1.0,
@@ -62,12 +52,7 @@ List<Widget> buildButtons() {
           fontSize: 14,
           fontWeight: FontWeight.bold,
           letterSpacing: 1,
-          color: Color.fromRGBO(
-            80,
-            175,
-            192,
-            1,
-          ),
+          color: Colors.blueAccent,
         ),
       ),
       onPressed: () {},
@@ -80,12 +65,7 @@ List<Widget> buildButtons() {
           fontSize: 14,
           letterSpacing: 1,
           fontWeight: FontWeight.bold,
-          color: Color.fromRGBO(
-            69,
-            64,
-            91,
-            1,
-          ),
+          color: Color(0xFF45405B),
         ),
       ),
       onPressed: () {},
@@ -98,12 +78,7 @@ List<Widget> buildButtons() {
           fontSize: 14,
           fontWeight: FontWeight.bold,
           letterSpacing: 1,
-          color: Color.fromRGBO(
-            69,
-            64,
-            91,
-            1,
-          ),
+          color: Color(0xFF45405B),
         ),
       ),
       onPressed: () {},
