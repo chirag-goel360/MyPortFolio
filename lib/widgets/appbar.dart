@@ -46,27 +46,29 @@ Widget buildTitle() {
 
 List<Widget> buildButtons(context) {
   return <Widget>[
-    MaterialButton(
-      child: Text(
-        'Home',
-        style: TextStyle(
-          fontFamily: 'Christian_Heedlay',
-          fontSize: 14,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 1,
-          color: Colors.blueAccent,
-        ),
-      ),
-      onPressed: () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) {
-              return HomePage();
-            },
+    SafeArea(
+      child: MaterialButton(
+        child: Text(
+          'Home',
+          style: TextStyle(
+            fontFamily: 'Christian_Heedlay',
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 1,
+            color: Colors.blueAccent,
           ),
-        );
-      },
+        ),
+        onPressed: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return HomePage();
+              },
+            ),
+          );
+        },
+      ),
     ),
     MaterialButton(
       child: Text(

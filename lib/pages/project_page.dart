@@ -14,15 +14,19 @@ class _ProjectsPageState extends State<ProjectsPage> {
     return Container(
       color: Colors.white,
       child: Scaffold(
-        appBar: buildAppBar(context),
-        drawer: buildDrawer(context),
+        appBar: buildAppBar(
+          context,
+        ),
+        drawer: buildDrawer(
+          context,
+        ),
         body: LayoutBuilder(
           builder: (context, constraints) {
             return buildBodyProjects(
               context,
               constraints,
             );
-          }
+          },
         ),
       ),
     );

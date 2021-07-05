@@ -17,7 +17,9 @@ Widget buildDesktop(BuildContext context) {
                     left: 40,
                     bottom: 40,
                   ),
-                  child: buildContent(context),
+                  child: buildContent(
+                    context,
+                  ),
                 ),
               ),
               Expanded(
@@ -30,7 +32,9 @@ Widget buildDesktop(BuildContext context) {
             ],
           ),
         ),
-        buildBottomBar(context),
+        buildBottomBar(
+          context,
+        ),
       ],
     ),
   );

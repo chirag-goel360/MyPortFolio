@@ -13,13 +13,17 @@ Widget buildTablet(BuildContext context) {
                 flex: 1,
                 child: Padding(
                   padding: EdgeInsets.all(12),
-                  child: buildContent(context),
+                  child: buildContent(
+                    context,
+                  ),
                 ),
               ),
             ],
           ),
         ),
-        buildBottomBar(context),
+        buildBottomBar(
+          context,
+        ),
       ],
     ),
   );

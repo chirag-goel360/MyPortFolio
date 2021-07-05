@@ -14,8 +14,12 @@ class _HomePageState extends State<HomePage> {
     return Container(
       color: Colors.white,
       child: Scaffold(
-        appBar: buildAppBar(context),
-        drawer: buildDrawer(context),
+        appBar: buildAppBar(
+          context,
+        ),
+        drawer: buildDrawer(
+          context,
+        ),
         body: LayoutBuilder(
           builder: (context, constraints) {
             return buildBody(

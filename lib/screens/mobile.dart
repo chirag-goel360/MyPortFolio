@@ -9,11 +9,15 @@ Widget buildMobile(BuildContext context) {
           flex: 1,
           child: Padding(
             padding: EdgeInsets.all(12),
-            child: buildContent(context),
+            child: buildContent(
+              context,
+            ),
           ),
         ),
         Divider(),
-        buildCopyRight(context),
+        buildCopyRight(
+          context,
+        ),
         SizedBox(
           height: 12,
         ),

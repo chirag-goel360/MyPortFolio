@@ -19,7 +19,9 @@ class _LoadingPageState extends State<LoadingPage> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => HomePage(),
+            builder: (context) {
+              return HomePage();
+            },
           ),
         );
       },
