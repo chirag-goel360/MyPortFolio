@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_open_whatsapp/flutter_open_whatsapp.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mailto/mailto.dart';
 import 'package:my_portfolio/helpers/education_class.dart';
 import 'package:my_portfolio/helpers/education_history.dart';
 import 'package:my_portfolio/helpers/experience_class.dart';
@@ -7,6 +9,7 @@ import 'package:my_portfolio/helpers/experience_history.dart';
 import 'package:my_portfolio/helpers/responsive.dart';
 import 'package:my_portfolio/helpers/skills.dart';
 import 'package:random_color/random_color.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Widget buildContent(BuildContext context) {
   return Column(
@@ -69,7 +72,7 @@ Widget buildContent(BuildContext context) {
         height: Responsive.isMobile(context) ? 12 : 24,
       ),
       Text(
-        'Recent Computer Science Graduate (9.0 CGPA) seeking to use my frontend development experience in an entry-level position. Possess 11 months of internship experience building and testing applications for Android, iOS, and Windows. Skilled with C, C++, Java, Python, Django, SQL, Firebase and Flutter. Independently built lots of application that are liked by many people around the Globe.',
+        'Recent Computer Science Graduate (9.0 CGPA) seeking to use my development skills and experience in an entry-level position.I possess 11 months of internship experience in building and testing applications for Android, iOS, Web and Windows. I am skilled with C, C++, Java, Python, Django, SQL, Firebase and Flutter. I have independently built lots of application for different platforms that are liked by many people around the Globe.',
         style: TextStyle(
           color: Color(0xFF81819C),
           fontSize: 16,
@@ -308,7 +311,7 @@ Widget buildEducationHeading() {
 
 Widget buildExperienceInfo() {
   return Text(
-    'I worked on verious technologies during my Internship period. I worked on Wordpress, Flutter, SQL, Adobe XD and PHP.',
+    'I worked on various technologies during my Internship period. Most of my Internship include work on Wordpress, Flutter, SQL, Adobe XD and PHP.',
     style: TextStyle(
       color: Color(0xFF85819C),
       fontSize: 14,
@@ -318,7 +321,7 @@ Widget buildExperienceInfo() {
 
 Widget buildEducationInfo() {
   return Text(
-    'I learned how to work in team, time management, enhance skills in corporate world during my college period. This will help me in a long run.',
+    'I learned how to work in team, time management, enhancing my skills in corporate world during my college life period. This will help me in a long run for sure.',
     style: TextStyle(
       color: Color(0xFF85819C),
       fontSize: 14,
@@ -432,7 +435,9 @@ Widget buildBottomBar(BuildContext context) {
               alignment: Alignment.centerLeft,
             ),
             Align(
-              child: buildIcons(),
+              child: buildIcons(
+                context,
+              ),
               alignment: Alignment.centerRight,
             ),
           ],
@@ -444,7 +449,7 @@ Widget buildBottomBar(BuildContext context) {
 
 Widget buildCopyRight(BuildContext context) {
   return Text(
-    '@ Chirag Goel. ALL RIGHTS RESERVED',
+    '@ Chirag Goel. ALL RIGHTS RESERVED.',
     style: TextStyle(
       fontSize: Responsive.isMobile(context) ? 10 : 12,
       color: Color(0xFF85819C),
@@ -452,12 +457,33 @@ Widget buildCopyRight(BuildContext context) {
   );
 }
 
-Widget buildIcons() {
+_launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could Not Launch URL';
+  }
+}
+
+_launchGmail() async {
+  final mailToChirag = Mailto(
+    to: ['chirag.goel360@gmail.com'],
+    cc: ['chirag.goel360@yahoo.com'],
+    subject: 'Hello Chirag Goel',
+    body: 'I Liked Your PortFolio',
+  );
+  await launch('$mailToChirag');
+}
+
+Widget buildIcons(context) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
       GestureDetector(
-        onTap: () {},
+        onTap: () {
+          String url = 'https://www.linkedin.com/in/chirag-goel-06b804148/';
+          _launchURL(url);
+        },
         child: Icon(
           FontAwesomeIcons.linkedinIn,
           color: Colors.blue,
@@ -468,7 +494,10 @@ Widget buildIcons() {
         width: 15,
       ),
       GestureDetector(
-        onTap: () {},
+        onTap: () {
+          String url = 'https://medium.com/@chirag.goel360';
+          _launchURL(url);
+        },
         child: Icon(
           FontAwesomeIcons.medium,
           color: Colors.black87,
@@ -478,19 +507,30 @@ Widget buildIcons() {
       SizedBox(
         width: 15,
       ),
+      !Responsive.isDesktop(context)
+          ? GestureDetector(
+              onTap: () {
+                FlutterOpenWhatsapp.sendSingleMessage(
+                  "919818496835",
+                  "Hello Chirag",
+                );
+              },
+              child: Icon(
+                FontAwesomeIcons.whatsapp,
+                color: Colors.green,
+                size: 20,
+              ),
+            )
+          : Container(),
+      !Responsive.isDesktop(context)
+          ? SizedBox(
+              width: 15,
+            )
+          : Container(),
       GestureDetector(
-        onTap: () {},
-        child: Icon(
-          FontAwesomeIcons.whatsapp,
-          color: Colors.green,
-          size: 20,
-        ),
-      ),
-      SizedBox(
-        width: 15,
-      ),
-      GestureDetector(
-        onTap: () {},
+        onTap: () {
+          _launchGmail();
+        },
         child: Icon(
           FontAwesomeIcons.google,
           color: Colors.red,
@@ -501,7 +541,10 @@ Widget buildIcons() {
         width: 15,
       ),
       GestureDetector(
-        onTap: () {},
+        onTap: () {
+          String url = 'https://github.com/chirag-goel360';
+          _launchURL(url);
+        },
         child: Icon(
           FontAwesomeIcons.github,
           color: Colors.black38,

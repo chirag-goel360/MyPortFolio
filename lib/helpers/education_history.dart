@@ -11,12 +11,12 @@ final educationHistory = [
     'April 2015',
     'April 2016',
     'Indira Ideal School',
-    'Computer Science Class(XII)',
+    'Computer Science Class (XII)',
   ),
   Education(
     'April 2014',
     'April 2015',
     'Indira Ideal School',
-    'Computer Science Class(X)',
+    'Computer Science Class (X)',
   ),
 ];

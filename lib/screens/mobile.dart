@@ -21,7 +21,9 @@ Widget buildMobile(BuildContext context) {
         SizedBox(
           height: 12,
         ),
-        buildIcons(),
+        buildIcons(
+          context,
+        ),
         SizedBox(
           height: 12,
         ),

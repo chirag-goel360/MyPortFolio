@@ -10,6 +10,7 @@ final skills = [
   'Firebase',
   'CSS',
   'SQL',
+  'C#',
   'Python',
   'C',
 ];
