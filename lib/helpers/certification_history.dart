@@ -8,4 +8,32 @@ final certificationHistory = [
     false,
     'www.google.com',
   ),
+  Certification(
+    'Today',
+    'ABC',
+    'APPLE',
+    false,
+    'www.google.com',
+  ),
+  Certification(
+    'Today',
+    'ABC',
+    'APPLE',
+    false,
+    'www.google.com',
+  ),
+  Certification(
+    'Today',
+    'ABC',
+    'APPLE',
+    false,
+    'www.google.com',
+  ),
+  Certification(
+    'Today',
+    'ABC',
+    'APPLE',
+    false,
+    'www.google.com',
+  ),
 ];
