@@ -56,8 +56,8 @@ class _SplashPageState extends State<SplashPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 180,
-                  height: 180,
+                  width: 200,
+                  height: 200,
                   child: rive.RiveAnimation.asset(
                     'assets/avatar.riv',
                     animations: [
@@ -67,7 +67,7 @@ class _SplashPageState extends State<SplashPage> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    top: 20,
+                    top: 25,
                   ),
                 ),
                 Container(
@@ -79,7 +79,7 @@ class _SplashPageState extends State<SplashPage> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    top: 20,
+                    top: 25,
                   ),
                 ),
                 CircularProgressIndicator(
@@ -87,12 +87,12 @@ class _SplashPageState extends State<SplashPage> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    top: 20,
+                    top: 25,
                   ),
                 ),
                 GradientText(
                   'PortFolio',
-                  textfont: 30,
+                  textfont: 35,
                   textalign: TextAlign.center,
                   weight: FontWeight.bold,
                   gradient: LinearGradient(

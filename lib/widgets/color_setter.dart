@@ -6,6 +6,7 @@ class GradientText extends StatelessWidget {
   final TextAlign textalign;
   final FontWeight weight;
   final Gradient gradient;
+
   GradientText(
     this.text, {
     @required this.gradient,
@@ -32,6 +33,7 @@ class GradientText extends StatelessWidget {
           color: Colors.white,
           fontSize: textfont,
           fontWeight: weight,
+          fontFamily: 'Bella_Safira',
         ),
       ),
     );

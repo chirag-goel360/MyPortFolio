@@ -40,7 +40,7 @@ Widget buildContent(BuildContext context) {
               style: TextStyle(
                 fontFamily: 'Beauty_Gadiez',
                 color: Colors.blue,
-                fontSize: Responsive.isMobile(context) ? 25 : 35,
+                fontSize: Responsive.isMobile(context) ? 28 : 37,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1.0,
               ),
@@ -48,8 +48,8 @@ Widget buildContent(BuildContext context) {
             WidgetSpan(
               child: Image.asset(
                 'assets/lob.png',
-                height: Responsive.isMobile(context) ? 20 : 30,
-                width: Responsive.isMobile(context) ? 20 : 30,
+                height: Responsive.isMobile(context) ? 28 : 37,
+                width: Responsive.isMobile(context) ? 28 : 37,
               ),
             ),
           ],
@@ -60,8 +60,8 @@ Widget buildContent(BuildContext context) {
       ),
       Text(
         Responsive.isMobile(context)
-            ? 'I am Chirag Goel, Mobile App Developer from Delhi, India'
-            : 'I am Chirag Goel, Mobile App Developer from Delhi, India. I am a talented, ambitious and hardworking individual, with broad skills in Software Development, Software Engineering, Social Media and Leading Projects.',
+            ? 'I am Chirag Goel, Android and Web Developer from Delhi, India'
+            : 'I am Chirag Goel, Android and Web Developer from Delhi, India. I am a talented, ambitious and hardworking individual, with broad skills in Software Development, Software Engineering, Social Media and Leading Projects.',
         style: TextStyle(
           color: Color(0xFF45405B),
           fontFamily: 'Relate',
@@ -192,7 +192,7 @@ Widget buildSkillsHeading() {
         'Skill I Have',
         style: TextStyle(
           color: Colors.indigo,
-          fontSize: 17.0,
+          fontSize: 17,
           fontWeight: FontWeight.w600,
           fontFamily: 'Christian_Heedlay',
         ),
@@ -227,7 +227,7 @@ Widget buildChips(BuildContext context, String label) {
                   ],
                 ),
               ),
-        fontSize: Responsive.isMobile(context) ? 12 : 14,
+        fontSize: Responsive.isMobile(context) ? 16 : 20,
       ),
     ),
   );
@@ -311,10 +311,10 @@ Widget buildEducationHeading() {
 
 Widget buildExperienceInfo() {
   return Text(
-    'I worked on various technologies during my Internship period. Most of my Internship include work on Wordpress, Flutter, SQL, Adobe XD and PHP.',
+    'I worked on various technologies during my Professional Career. Most of my work include working on Sitecore, Javascript, Wordpress, Flutter, SQL, Adobe XD and PHP.',
     style: TextStyle(
       color: Color(0xFF85819C),
-      fontSize: 14,
+      fontSize: 15,
     ),
   );
 }
@@ -324,7 +324,7 @@ Widget buildEducationInfo() {
     'I learned how to work in team, time management, enhancing my skills in corporate world during my college life period. This will help me in a long run for sure.',
     style: TextStyle(
       color: Color(0xFF85819C),
-      fontSize: 14,
+      fontSize: 15,
     ),
   );
 }

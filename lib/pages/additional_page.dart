@@ -13,7 +13,7 @@ class _LoadingPageState extends State<LoadingPage> {
     super.initState();
     Future.delayed(
       Duration(
-        seconds: 3,
+        seconds: 4,
       ),
       () {
         Navigator.pushReplacement(
@@ -59,8 +59,8 @@ class _LoadingPageState extends State<LoadingPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 180,
-              height: 180,
+              width: 200,
+              height: 200,
               child: FlareActor(
                 'assets/loading.flr',
                 animation: 'active',
@@ -79,6 +79,7 @@ class _LoadingPageState extends State<LoadingPage> {
                   style: TextStyle(
                     color: Colors.purple.shade400,
                     fontSize: 25,
+                    fontFamily: 'Mayor',
                     fontWeight: FontWeight.bold,
                   ),
                 ),

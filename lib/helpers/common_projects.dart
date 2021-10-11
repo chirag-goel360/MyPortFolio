@@ -187,7 +187,7 @@ Widget buildTechHeading() {
         'Technology Used',
         style: TextStyle(
           color: Colors.indigo,
-          fontSize: 17.0,
+          fontSize: 14,
           fontWeight: FontWeight.w600,
           fontFamily: 'Christian_Heedlay',
         ),
@@ -222,7 +222,7 @@ Widget buildTechChip(BuildContext context, String label) {
                   ],
                 ),
               ),
-        fontSize: Responsive.isMobile(context) ? 12 : 14,
+        fontSize: Responsive.isMobile(context) ? 14 : 16,
       ),
     ),
   );

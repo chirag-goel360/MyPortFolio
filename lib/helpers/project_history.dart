@@ -4,9 +4,9 @@ final projectHistory = [
   Project(
     'An Android/iOS Application which contains a lot of Food Recipies from all over the world.',
     'Indian Rasoi',
-    false,
     true,
-    '',
+    true,
+    'www.google.com',
     'Github link',
     ['Flutter'],
   ),

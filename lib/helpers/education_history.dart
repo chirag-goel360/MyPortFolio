@@ -3,7 +3,7 @@ import 'package:my_portfolio/helpers/education_class.dart';
 final educationHistory = [
   Education(
     'August 2017',
-    'Present',
+    'July 2021',
     'Amity School of Engineering and Technology',
     'Computer Science Engineering',
   ),

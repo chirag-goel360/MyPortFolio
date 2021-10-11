@@ -82,6 +82,12 @@ flutter:
     - family: Amanah
       fonts:
         - asset: assets/Amanah.ttf
+    - family: Bella_Safira
+      fonts:
+        - asset: assets/Bella-Safira.otf
+    - family: Mayor
+      fonts:
+        - asset: assets/Mayor.otf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
