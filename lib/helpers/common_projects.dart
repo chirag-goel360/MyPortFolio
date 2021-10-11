@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/helpers/project_class.dart';
@@ -34,7 +36,7 @@ Widget buildProjectContent(BuildContext context) {
 Widget projectGrid(context, Project projectHistory) {
   return Container(
     margin: EdgeInsets.only(
-      bottom: 30,
+      bottom: 10,
     ),
     padding: EdgeInsets.symmetric(
       horizontal: 16,
@@ -86,7 +88,9 @@ Widget projectGrid(context, Project projectHistory) {
                   onTap: () {},
                   child: Icon(
                     FontAwesomeIcons.solidFolder,
-                    color: Colors.blue,
+                    color: Colors.primaries[Random().nextInt(
+                      Colors.primaries.length,
+                    )],
                     size: 20,
                   ),
                 ),
@@ -129,11 +133,17 @@ Widget projectGrid(context, Project projectHistory) {
             Center(
               child: Text(
                 projectHistory.name,
+                style: TextStyle(
+                  color: Colors.primaries[Random().nextInt(
+                    Colors.primaries.length,
+                  )],
+                  fontSize: 17,
+                ),
               ),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 7,
               ),
             ),
             Text(
@@ -212,7 +222,13 @@ Widget buildTechChip(BuildContext context, String label) {
       style: TextStyle(
         color: Responsive.isMobile(context)
             ? _randomColor.randomColor(
-                colorHue: ColorHue.red,
+                colorHue: ColorHue.multiple(
+                  colorHues: [
+                    ColorHue.red,
+                    ColorHue.blue,
+                    ColorHue.pink,
+                  ],
+                ),
               )
             : _randomColor.randomColor(
                 colorHue: ColorHue.multiple(

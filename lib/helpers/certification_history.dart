@@ -7,6 +7,7 @@ final certificationHistory = [
     'APPLE',
     false,
     'www.google.com',
+    '',
   ),
   Certification(
     'Today',
@@ -14,6 +15,7 @@ final certificationHistory = [
     'APPLE',
     false,
     'www.google.com',
+    '',
   ),
   Certification(
     'Today',
@@ -21,6 +23,7 @@ final certificationHistory = [
     'APPLE',
     false,
     'www.google.com',
+    '',
   ),
   Certification(
     'Today',
@@ -28,6 +31,7 @@ final certificationHistory = [
     'APPLE',
     false,
     'www.google.com',
+    '',
   ),
   Certification(
     'Today',
@@ -35,5 +39,6 @@ final certificationHistory = [
     'APPLE',
     false,
     'www.google.com',
+    '',
   ),
 ];

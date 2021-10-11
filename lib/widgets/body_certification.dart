@@ -4,7 +4,8 @@ import 'package:my_portfolio/screens/desktop_certification.dart';
 import 'package:my_portfolio/screens/mobile_certification.dart';
 import 'package:my_portfolio/screens/tablet_certification.dart';
 
-Widget buildBodyCertification(BuildContext context, BoxConstraints constraints) {
+Widget buildBodyCertification(
+    BuildContext context, BoxConstraints constraints) {
   return SingleChildScrollView(
     child: ConstrainedBox(
       constraints: BoxConstraints(

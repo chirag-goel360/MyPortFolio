@@ -4,6 +4,7 @@ class Certification {
   String name;
   bool islink;
   String link;
+  String image;
 
   Certification(
     this.date,
@@ -11,5 +12,6 @@ class Certification {
     this.name,
     this.islink,
     this.link,
+    this.image,
   );
 }

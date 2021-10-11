@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
 
-Widget buildCertificationContent(BuildContext context){
+Widget buildCertificationContent(BuildContext context) {
   return Container();
 }

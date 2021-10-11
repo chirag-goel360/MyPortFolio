@@ -34,6 +34,7 @@ class GradientText extends StatelessWidget {
           fontSize: textfont,
           fontWeight: weight,
           fontFamily: 'Bella_Safira',
+          letterSpacing: 4,
         ),
       ),
     );

@@ -79,6 +79,7 @@ class _LoadingPageState extends State<LoadingPage> {
                   style: TextStyle(
                     color: Colors.purple.shade400,
                     fontSize: 25,
+                    letterSpacing: 2,
                     fontFamily: 'Mayor',
                     fontWeight: FontWeight.bold,
                   ),

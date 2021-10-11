@@ -31,19 +31,22 @@ Widget buildContent(BuildContext context) {
               style: TextStyle(
                 fontFamily: 'Beauty_Gadiez',
                 color: Color(0xFF45405B),
-                fontSize: Responsive.isMobile(context) ? 36 : 45,
+                fontSize: Responsive.isMobile(context) ? 40 : 45,
                 fontWeight: FontWeight.bold,
               ),
             ),
             TextSpan(
-              text: 'Me ',
+              text: 'Me',
               style: TextStyle(
                 fontFamily: 'Beauty_Gadiez',
                 color: Colors.blue,
-                fontSize: Responsive.isMobile(context) ? 28 : 37,
+                fontSize: Responsive.isMobile(context) ? 32 : 37,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1.0,
               ),
+            ),
+            TextSpan(
+              text: ' ',
             ),
             WidgetSpan(
               child: Image.asset(
@@ -60,7 +63,7 @@ Widget buildContent(BuildContext context) {
       ),
       Text(
         Responsive.isMobile(context)
-            ? 'I am Chirag Goel, Android and Web Developer from Delhi, India'
+            ? 'I am Chirag Goel, Android and Web Developer from Delhi, India.'
             : 'I am Chirag Goel, Android and Web Developer from Delhi, India. I am a talented, ambitious and hardworking individual, with broad skills in Software Development, Software Engineering, Social Media and Leading Projects.',
         style: TextStyle(
           color: Color(0xFF45405B),
@@ -72,7 +75,7 @@ Widget buildContent(BuildContext context) {
         height: Responsive.isMobile(context) ? 12 : 24,
       ),
       Text(
-        'Recent Computer Science Graduate (9.0 CGPA) seeking to use my development skills and experience in an entry-level position.I possess 11 months of internship experience in building and testing applications for Android, iOS, Web and Windows. I am skilled with C, C++, Java, Python, Django, SQL, Firebase and Flutter. I have independently built lots of application for different platforms that are liked by many people around the Globe.',
+        'Recently Computer Science Graduated (8.9 CGPA) seeking to use my development skills and experience in an entry-level position. I possess 11 months of internship experience in building and testing applications for Android, iOS, Web and Windows. I am skilled with C#, C++, Java, ASP.NET, Django, SQL, Firebase and Flutter. I have independently built a lots of applications for different platforms that are loved by many people around the Globe.',
         style: TextStyle(
           color: Color(0xFF81819C),
           fontSize: 16,
@@ -227,7 +230,7 @@ Widget buildChips(BuildContext context, String label) {
                   ],
                 ),
               ),
-        fontSize: Responsive.isMobile(context) ? 16 : 20,
+        fontSize: Responsive.isMobile(context) ? 14 : 18,
       ),
     ),
   );
@@ -311,7 +314,7 @@ Widget buildEducationHeading() {
 
 Widget buildExperienceInfo() {
   return Text(
-    'I worked on various technologies during my Professional Career. Most of my work include working on Sitecore, Javascript, Wordpress, Flutter, SQL, Adobe XD and PHP.',
+    'I worked on various technologies during my Professional Career. Most of my work include working on Sitecore, Javascript, Wordpress, Flutter, SQL, Adobe XD, C# and PHP.',
     style: TextStyle(
       color: Color(0xFF85819C),
       fontSize: 15,
@@ -321,7 +324,7 @@ Widget buildExperienceInfo() {
 
 Widget buildEducationInfo() {
   return Text(
-    'I learned how to work in team, time management, enhancing my skills in corporate world during my college life period. This will help me in a long run for sure.',
+    'I learned how to work in team, time management, enhance my skills in corporate world during my college life period. This will help me for long run in corporate for sure.',
     style: TextStyle(
       color: Color(0xFF85819C),
       fontSize: 15,
@@ -449,7 +452,7 @@ Widget buildBottomBar(BuildContext context) {
 
 Widget buildCopyRight(BuildContext context) {
   return Text(
-    '@ Chirag Goel. ALL RIGHTS RESERVED.',
+    '© 2021, Chirag Goel. All Rights Reserved.',
     style: TextStyle(
       fontSize: Responsive.isMobile(context) ? 10 : 12,
       color: Color(0xFF85819C),
