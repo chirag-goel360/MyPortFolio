@@ -88,6 +88,9 @@ flutter:
     - family: Mayor
       fonts:
         - asset: assets/Mayor.otf
+    - family: Poppins-Regular
+      fonts:
+        - asset: assets/Poppins-Regular.otf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

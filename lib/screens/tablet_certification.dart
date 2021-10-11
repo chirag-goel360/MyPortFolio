@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/helpers/common_projects.dart';
+import 'package:my_portfolio/helpers/common_certifications.dart';
 
 Widget buildTabletCertification(BuildContext context) {
   return IntrinsicHeight(
@@ -8,7 +8,7 @@ Widget buildTabletCertification(BuildContext context) {
         Expanded(
           child: Padding(
             padding: EdgeInsets.all(10),
-            child: buildProjectContent(
+            child: buildCertificationContent(
               context,
             ),
           ),

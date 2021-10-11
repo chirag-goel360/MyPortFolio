@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/helpers/common_projects.dart';
+import 'package:my_portfolio/helpers/common_certifications.dart';
 
 Widget buildMobileCertification(BuildContext context) {
   return IntrinsicHeight(
@@ -8,7 +8,7 @@ Widget buildMobileCertification(BuildContext context) {
         Expanded(
           child: Padding(
             padding: EdgeInsets.all(8),
-            child: buildProjectContent(
+            child: buildCertificationContent(
               context,
             ),
           ),
