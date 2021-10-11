@@ -1,11 +1,11 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/helpers/project_class.dart';
 import 'package:my_portfolio/helpers/project_history.dart';
 import 'package:my_portfolio/helpers/responsive.dart';
 import 'package:random_color/random_color.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Widget buildProjectContent(BuildContext context) {
   return SizedBox(
@@ -31,6 +31,14 @@ Widget buildProjectContent(BuildContext context) {
       },
     ),
   );
+}
+
+_launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could Not Launch URL';
+  }
 }
 
 Widget projectGrid(context, Project projectHistory) {
@@ -85,7 +93,10 @@ Widget projectGrid(context, Project projectHistory) {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    String url = projectHistory.gitLink;
+                    _launchURL(url);
+                  },
                   child: Icon(
                     FontAwesomeIcons.solidFolder,
                     color: Colors.primaries[Random().nextInt(
@@ -98,7 +109,10 @@ Widget projectGrid(context, Project projectHistory) {
                   children: [
                     projectHistory.isLink
                         ? GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              String url = projectHistory.link;
+                              _launchURL(url);
+                            },
                             child: Icon(
                               FontAwesomeIcons.link,
                               color: Colors.black,
@@ -113,7 +127,10 @@ Widget projectGrid(context, Project projectHistory) {
                     ),
                     projectHistory.isGit
                         ? GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              String url = projectHistory.gitLink;
+                              _launchURL(url);
+                            },
                             child: Icon(
                               FontAwesomeIcons.github,
                               color: Colors.black38,

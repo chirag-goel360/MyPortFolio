@@ -7,7 +7,7 @@ Widget buildDesktopCertification(BuildContext context) {
       children: [
         Expanded(
           child: Padding(
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.all(12),
             child: buildProjectContent(
               context,
             ),
