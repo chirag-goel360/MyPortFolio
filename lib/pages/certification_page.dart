@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/widgets/appbar.dart';
+import 'package:my_portfolio/widgets/body_certification.dart';
 import 'package:my_portfolio/widgets/drawer.dart';
 
 class CertificationPage extends StatefulWidget {
@@ -21,7 +22,10 @@ class _CertificationPageState extends State<CertificationPage> {
         ),
         body: LayoutBuilder(
           builder: (context, constraints) {
-            return Container();
+            return buildBodyCertification(
+              context,
+              constraints,
+            );
           },
         ),
       ),
