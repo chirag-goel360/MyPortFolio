@@ -121,20 +121,22 @@ Widget certificateTabletGrid(context, Certification certification) {
                   top: 20,
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                  left: 50,
-                ),
-                child: ElevatedButton(
-                  onPressed: () {
-                    String url = certification.link;
-                    _launchURL(url);
-                  },
-                  child: Text(
-                    'Link',
-                  ),
-                ),
-              )
+              certification.islink
+                  ? Padding(
+                      padding: EdgeInsets.only(
+                        left: 50,
+                      ),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          String url = certification.link;
+                          _launchURL(url);
+                        },
+                        child: Text(
+                          'Link',
+                        ),
+                      ),
+                    )
+                  : Container(),
             ],
           ),
         ),
