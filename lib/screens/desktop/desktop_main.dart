@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/helpers/commons.dart';
+import 'package:my_portfolio/helpers/commons_main.dart';
 
-Widget buildTablet(BuildContext context) {
+Widget buildDesktop(BuildContext context) {
   return IntrinsicHeight(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -10,12 +10,23 @@ Widget buildTablet(BuildContext context) {
           child: Row(
             children: [
               Expanded(
-                flex: 1,
+                flex: 3,
                 child: Padding(
-                  padding: EdgeInsets.all(12),
+                  padding: EdgeInsets.only(
+                    top: 40,
+                    left: 40,
+                    bottom: 40,
+                  ),
                   child: buildContent(
                     context,
                   ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Image.asset(
+                  'assets/programmer.gif',
+                  height: 450,
                 ),
               ),
             ],

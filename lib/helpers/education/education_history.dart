@@ -1,4 +1,4 @@
-import 'package:my_portfolio/helpers/education_class.dart';
+import 'package:my_portfolio/helpers/education/education_class.dart';
 
 final educationHistory = [
   Education(

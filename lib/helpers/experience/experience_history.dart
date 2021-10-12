@@ -1,4 +1,4 @@
-import 'package:my_portfolio/helpers/experience_class.dart';
+import 'package:my_portfolio/helpers/experience/experience_class.dart';
 
 final experienceHistory = [
   Experience(

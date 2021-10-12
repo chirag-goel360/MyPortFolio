@@ -1,8 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:my_portfolio/helpers/project_class.dart';
-import 'package:my_portfolio/helpers/project_history.dart';
+import 'package:my_portfolio/helpers/project/project_class.dart';
+import 'package:my_portfolio/helpers/project/project_history.dart';
 import 'package:my_portfolio/helpers/responsive.dart';
 import 'package:random_color/random_color.dart';
 import 'package:url_launcher/url_launcher.dart';

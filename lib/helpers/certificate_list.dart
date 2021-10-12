@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/helpers/certification_class.dart';
+import 'package:my_portfolio/helpers/certificate/certification_class.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CertificationList extends StatelessWidget {
@@ -35,7 +35,7 @@ class CertificationList extends StatelessWidget {
 
     final regularTextStyle = baseTextStyle.copyWith(
       color: Colors.black,
-      fontSize: 10,
+      fontSize: 12,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.1,
     );
@@ -51,10 +51,10 @@ class CertificationList extends StatelessWidget {
         children: [
           Image.asset(
             image,
-            height: 25,
+            height: 27,
           ),
           Container(
-            width: 5,
+            width: 10,
           ),
           Text(
             value,
@@ -71,10 +71,10 @@ class CertificationList extends StatelessWidget {
         children: [
           Image.asset(
             image,
-            height: 25,
+            height: 27,
           ),
           Container(
-            width: 5,
+            width: 10,
           ),
           Text(
             value,
@@ -137,6 +137,7 @@ class CertificationList extends StatelessWidget {
               ? Padding(
                   padding: EdgeInsets.only(
                     left: 70,
+                    top: 5,
                   ),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -196,7 +197,7 @@ class CertificationList extends StatelessWidget {
         bottom: 10,
       ),
       child: Container(
-        height: 180,
+        height: 210,
         margin: EdgeInsets.symmetric(
           vertical: 5,
           horizontal: 10,

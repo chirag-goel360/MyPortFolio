@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/helpers/responsive.dart';
-import 'package:my_portfolio/screens/desktop/desktop_projects.dart';
-import 'package:my_portfolio/screens/mobile/mobile_projects.dart';
-import 'package:my_portfolio/screens/tablet/tablet_projects.dart';
+import 'package:my_portfolio/screens/desktop/desktop_main.dart';
+import 'package:my_portfolio/screens/mobile/mobile_main.dart';
+import 'package:my_portfolio/screens/tablet/tablet_main.dart';
 
-Widget buildBodyProjects(BuildContext context, BoxConstraints constraints) {
+Widget buildBody(BuildContext context, BoxConstraints constraints) {
   return SingleChildScrollView(
     child: ConstrainedBox(
       constraints: BoxConstraints(
@@ -12,13 +12,13 @@ Widget buildBodyProjects(BuildContext context, BoxConstraints constraints) {
         minHeight: constraints.maxHeight,
       ),
       child: Responsive(
-        desktop: buildDesktopProjects(
+        desktop: buildDesktop(
           context,
         ),
-        tablet: buildTabletProjects(
+        tablet: buildTablet(
           context,
         ),
-        mobile: buildMobileProjects(
+        mobile: buildMobile(
           context,
         ),
       ),

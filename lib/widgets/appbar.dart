@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/helpers/responsive.dart';
 import 'package:my_portfolio/pages/certification_page.dart';
 import 'package:my_portfolio/pages/contactme_page.dart';
+import 'package:my_portfolio/pages/extracurricular_page.dart';
 import 'package:my_portfolio/pages/mainpage.dart';
 import 'package:my_portfolio/pages/project_page.dart';
 
@@ -111,6 +112,28 @@ List<Widget> buildButtons(context) {
           MaterialPageRoute(
             builder: (context) {
               return CertificationPage();
+            },
+          ),
+        );
+      },
+    ),
+    MaterialButton(
+      child: Text(
+        'Extra',
+        style: TextStyle(
+          fontFamily: 'Christian_Heedlay',
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          letterSpacing: 1,
+          color: Color(0xFF45405B),
+        ),
+      ),
+      onPressed: () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return ExtraCurricularPage();
             },
           ),
         );

@@ -1,4 +1,4 @@
-import 'package:my_portfolio/helpers/project_class.dart';
+import 'package:my_portfolio/helpers/project/project_class.dart';
 
 final projectHistory = [
   Project(

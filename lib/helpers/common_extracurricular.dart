@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-Widget buildContactMeContent(BuildContext context) {
+Widget buildExtraContent(BuildContext context) {
   return Container();
 }
