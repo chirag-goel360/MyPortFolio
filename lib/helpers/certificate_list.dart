@@ -16,23 +16,30 @@ class CertificationList extends StatelessWidget {
         vertical: 5,
       ),
       alignment: FractionalOffset.centerLeft,
-      child: Image(
-        image: AssetImage(
-          certificate.image,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        image: DecorationImage(
+          image: AssetImage(
+            certificate.image,
+          ),
+          fit: BoxFit.fill,
         ),
-        height: 95,
-        width: 90,
       ),
+      height: 90,
+      width: 90,
     );
+
     final baseTextStyle = TextStyle(
       fontFamily: 'Poppins-Regular',
     );
+
     final regularTextStyle = baseTextStyle.copyWith(
       color: Colors.black,
       fontSize: 10,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.1,
     );
+
     final headerTextStyle = baseTextStyle.copyWith(
       color: Colors.white,
       fontSize: 14,
@@ -40,6 +47,26 @@ class CertificationList extends StatelessWidget {
     );
 
     Widget _certificateValue({String value, String image}) {
+      return Row(
+        children: [
+          Image.asset(
+            image,
+            height: 25,
+          ),
+          Container(
+            width: 5,
+          ),
+          Text(
+            value,
+            maxLines: 1,
+            overflow: TextOverflow.fade,
+            style: regularTextStyle,
+          ),
+        ],
+      );
+    }
+
+    Widget _certificateDate({String value, String image}) {
       return Row(
         children: [
           Image.asset(
@@ -90,16 +117,16 @@ class CertificationList extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Row(
+          Column(
             children: [
-              Expanded(
+              Container(
                 child: _certificateValue(
                   value: certificate.organization,
                   image: 'assets/company.png',
                 ),
               ),
-              Expanded(
-                child: _certificateValue(
+              Container(
+                child: _certificateDate(
                   value: certificate.date,
                   image: 'assets/time.png',
                 ),
@@ -133,6 +160,7 @@ class CertificationList extends StatelessWidget {
       Colors.purple.shade200,
       Colors.orange.shade200,
     ];
+
     List<double> _stops = [
       0.0,
       0.7,
@@ -163,17 +191,27 @@ class CertificationList extends StatelessWidget {
       ),
     );
 
-    return Container(
-      height: 180,
-      margin: EdgeInsets.symmetric(
-        vertical: 5,
-        horizontal: 10,
+    return Padding(
+      padding: EdgeInsets.only(
+        bottom: 10,
       ),
-      child: Stack(
-        children: [
-          certificateCard,
-          thumbNail,
-        ],
+      child: Container(
+        height: 180,
+        margin: EdgeInsets.symmetric(
+          vertical: 5,
+          horizontal: 10,
+        ),
+        child: Stack(
+          children: [
+            certificateCard,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                thumbNail,
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
