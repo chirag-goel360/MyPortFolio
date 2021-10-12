@@ -230,7 +230,7 @@ Widget buildChips(BuildContext context, String label) {
                   ],
                 ),
               ),
-        fontSize: Responsive.isMobile(context) ? 14 : 18,
+        fontSize: Responsive.isMobile(context) ? 14 : 16,
       ),
     ),
   );

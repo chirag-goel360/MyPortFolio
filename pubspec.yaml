@@ -37,6 +37,7 @@ dependencies:
   flutter_svg:
   url_launcher:
   dotted_border:
+  flutter_gradient_colors:
 
 dev_dependencies:
   flutter_test:
@@ -94,6 +95,12 @@ flutter:
     - family: Poppins-Regular
       fonts:
         - asset: assets/Poppins-Regular.otf
+    - family: Hanifah
+      fonts:
+        - asset: assets/hanifah.ttf
+    - family: Baby-Child
+      fonts:
+        - asset: assets/baby_child.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

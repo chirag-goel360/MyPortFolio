@@ -94,6 +94,8 @@ class CertificationList extends StatelessWidget {
       }
     }
 
+    double width = MediaQuery.of(context).size.width;
+
     final cardContent = Container(
       margin: EdgeInsets.fromLTRB(
         75,
@@ -136,7 +138,7 @@ class CertificationList extends StatelessWidget {
           certificate.islink
               ? Padding(
                   padding: EdgeInsets.only(
-                    left: 70,
+                    left: (width / 2) - 150,
                     top: 5,
                   ),
                   child: ElevatedButton(
